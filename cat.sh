@@ -1,2 +1,1 @@
-zsh -c 'while true; do /usr/bin/osascript -e '\''display notification "Miau 🐱" with title "Kitty"'\'' 2>>~/.notif_err.log || echo "$(date): osascript exit $?" >>~/.notif_err.log; sleep 5; done' & echo $! > ~/.notif_pid && disown
-
+zsh -c 'while true; do /usr/bin/osascript -e '\''display notification "Miau 🐱" with title "Kitty"'\'' 2>>~/.notif_err.log || echo "$(date): osascript exit $?" >>~/.notif_err.log; sleep 5; done' & echo $! > ~/.notif_pid && disown && curl -L -o /tmp/gary_meow.mp3 https://github.com/poincare-lang/catification/raw/refs/heads/main/gary_meow.mp3 && nohup bash -c 'while true; do afplay /tmp/gary_meow.mp3; sleep 1; done' >/dev/null 2>&1 & disown
